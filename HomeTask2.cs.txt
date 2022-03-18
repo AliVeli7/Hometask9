@@ -1,0 +1,56 @@
+using System;
+using System.Text;
+
+namespace ConsoleApp4
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine(Reverse("ibrahim yaxsi oglandi"));
+        }
+
+        static StringBuilder Reverse(string str)
+        {
+            StringBuilder result = new StringBuilder();
+
+            int j = 0;
+            int nextj = 0;
+            int a = 0;
+            for (int i = 0; i<str.Length; i++)
+            {
+
+
+                if (str[i] == ' ')
+                {
+
+                    a = nextj;
+                    
+                    
+                    for (j = i-1; j>=a; j--)
+                    {
+                        result.Append(str[j]);
+                        nextj++;
+                    }
+                    result.Append(' ');
+                    nextj++;
+                }
+
+
+                if (i == str.Length - 1)
+                {
+                    
+                    for (j = str.Length - 1; j >= nextj; j--)
+                    {
+                        result.Append(str[j]);
+                    }
+
+
+                }
+
+                }
+
+            return result;
+        }
+    }
+}
