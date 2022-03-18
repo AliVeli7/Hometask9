@@ -1,0 +1,70 @@
+using System;
+using System.Text;
+
+namespace ConsoleApp4
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            indexOf("salm", "sal");
+        }
+
+
+
+
+        static void indexOf(string str, string index, int numindex=0)
+        {
+
+            int a = 0;
+            if (numindex!=0)
+            {
+                for (int i = numindex; i < str.Length; i++)
+                {
+                    for (int j = 0; j < index.Length; j++)
+                    {
+                        if (str[i] == index[j] && (j == a || str[i - 1] == index[j - 1]))
+                        {
+
+                            Console.WriteLine(i + 1);
+
+                        }
+
+                    }
+
+
+
+                }
+            }
+            else
+            {
+                for (int i = numindex; i < str.Length; i++)
+                {
+                    for (int j = 0; j < index.Length; j++)
+                    {
+                        if (str[i] == index[j] && (j == a || str[i - 1] == index[j - 1]))
+                        {
+
+                            Console.WriteLine(i);
+
+                        }
+
+                    }
+
+
+
+                }
+            }
+                
+        } 
+
+
+
+
+
+
+
+
+        }
+    
+}
